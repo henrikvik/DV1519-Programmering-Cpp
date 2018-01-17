@@ -15,4 +15,6 @@ system("pause");
 # Användbara länkar
 * [C++ Referens Sida](http://en.cppreference.com/)
 * [Vad är objektorientering?](http://www.databasteknik.se/webbkursen/oo-grunder/)
+* [UML Cheatsheet](http://www.anotherchris.net/wp-content/uploads/2010/01/umlcheatsheet.jpg)
+
 * [Game Programming Patterns](http://gameprogrammingpatterns.com/contents.html)
