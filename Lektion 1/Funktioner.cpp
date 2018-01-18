@@ -3,8 +3,8 @@
 using namespace std;
 
 
-// överlagrade funktioner har samma namn
-// men olika parametrar/argument för att skilja på dem
+// Ã¶verlagrade funktioner har samma namn
+// men olika parametrar/argument fÃ¶r att skilja pÃ¥ dem
 void addName(string names[], int &namesCount);
 void addName(string name, string names[], int &namesCount);
 
@@ -15,10 +15,10 @@ int findName(string name, string names[], int namesCount);
 bool removeNameFast(int index, string names[], int &namesCount);
 bool removeNameSorted(int index, string names[], int &namesCount);
 
-// här använder vi ett default argument om användaren inte
-// skickar in ett eget värde så kommer default argumentet att användas
-// default argument måste vara i slutet av en funtion
-// vi använder även *& vilket är en pekar-referens detta låter oss läsa pekaren och ändra dess värde
+// hÃ¤r anvÃ¤nder vi ett default argument om anvÃ¤ndaren inte
+// skickar in ett eget vÃ¤rde sÃ¥ kommer default argumentet att anvÃ¤ndas
+// default argument mÃ¥ste vara i slutet av en funtion
+// vi anvÃ¤nder Ã¤ven *& vilket Ã¤r en pekar-referens detta lÃ¥ter oss lÃ¤sa pekaren och Ã¤ndra dess vÃ¤rde
 void expandNames(string *& names, int namesCount, int & namesCapacity, int increaseAmount = 10);
 
 int main()
@@ -61,6 +61,8 @@ int main()
     }
 
     printNames(names, namesCount);
+    
+    delete[] names;
 
     system("pause");
     return 0;
