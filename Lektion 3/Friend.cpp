@@ -54,3 +54,36 @@ void Friend::setBirthDate(int birthDate)
 	this->birthMonth = month;
 	this->birthYear = year;
 }
+
+bool Friend::operator==(Friend const& other) const
+{
+	return (this->name == other.name)
+		&& (this->birthYear == other.birthYear)
+		&& (this->birthMonth == other.birthMonth)
+		&& (this->birthDay == other.birthDay);
+}
+
+int Friend::age(int year) const
+{
+	return year - birthYear;
+}
+
+int Friend::getBirthYear() const
+{
+	return this->birthYear;
+}
+
+int Friend::getBirthMonth() const
+{
+	return this->birthMonth;
+}
+
+int Friend::getBirthDay() const
+{
+	return this->birthDay;
+}
+
+string Friend::getName() const
+{
+	return this->name;
+}

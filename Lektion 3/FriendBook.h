@@ -6,6 +6,7 @@ class FriendBook
 {
 public:
 	FriendBook(string title);
+	~FriendBook();
 
 	bool addFriend(string name, int birthDate); // parameters name, birthyear - use  the == operator to avoid multiples
 	bool removeFriend(string name, int birthDate); // parameters name, birthyear, ...
@@ -16,6 +17,7 @@ public:
 	void setTitle(string title);
 	void clear();
 	void getFriendsAsString(string arr[], int nrOf)const;
+
 	void saveOnFile() const; // filename name of owner followed by .txt
 	void readFromFile(); // filename name of owner followed by .txt
 
@@ -25,4 +27,6 @@ private:
 	int friendsCount;
 
 	string title;
+
+	void expand();
 };
