@@ -111,6 +111,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Friend.h" />
+    <ClInclude Include="FriendBook.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Friend.cpp" />
+    <ClCompile Include="FriendBook.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
