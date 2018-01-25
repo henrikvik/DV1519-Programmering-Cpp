@@ -36,7 +36,7 @@ int menu();
 void addMovie(MovieHandler & handler);
 void removeMovie(MovieHandler & handler);
 void showMovies(MovieHandler & handler);
-void testHandler(MovieHandler & handler);
+void testHandler();
 
 int main()
 {
@@ -62,7 +62,7 @@ int main()
             showMovies(movieHandler);
             break;
         case 4:
-            testHandler(movieHandler);
+            testHandler();
             break;
         default:
             cout << "Not a valid option. Try again." << endl;
@@ -145,7 +145,7 @@ void showMovies(MovieHandler & handler)
     delete[] movieStrings;
 }
 
-void testHandler(MovieHandler & handler)
+void testHandler()
 {
     string testDataNames[] = {
         "The Shawshank Redemption", 
@@ -172,30 +172,18 @@ void testHandler(MovieHandler & handler)
         1999
     };
 
-    cout << "Clearing all previous movies. ";
-    handler.clear();
-
     _CrtMemState startMemState, endMemState, diffMemState;
     _CrtMemCheckpoint( &startMemState );
 
-    int movieCount = handler.getMovieCount();
-    cout << "Movies in list " << movieCount << ". ";
-    if (movieCount == 0)
-    {
-        cout << "OK!" << endl;
-    }
-    else
-    {
-        cout << "FAIL." << endl;
-    }
+    MovieHandler * handler = new MovieHandler();
 
     cout << "Adding test data. ";
     for (size_t i = 0; i < 10; i++)
     {
-        handler.addMovie(testDataNames[i], testDataYears[i]);
+        handler->addMovie(testDataNames[i], testDataYears[i]);
     }
 
-    movieCount = handler.getMovieCount();
+    int movieCount = handler->getMovieCount();
     cout << "Movies in list " << movieCount << ". ";
     if (movieCount == 10)
     {
@@ -208,7 +196,7 @@ void testHandler(MovieHandler & handler)
     
 
     cout << "Removing a movie. ";
-    bool removeMovie1 = handler.removeMovie("12 Angry Men", 1957);
+    bool removeMovie1 = handler->removeMovie("12 Angry Men", 1957);
     if (removeMovie1)
     {
         cout << "OK!" << endl;
@@ -219,7 +207,7 @@ void testHandler(MovieHandler & handler)
     }
 
     cout << "Trying to remove a movie that does not exist. ";
-    bool removeMovie2 = handler.removeMovie("Fight Club", 2001);
+    bool removeMovie2 = handler->removeMovie("Fight Club", 2001);
     if (removeMovie2 == false)
     {
         cout << "OK!" << endl;
@@ -230,8 +218,8 @@ void testHandler(MovieHandler & handler)
     }
 
     cout << "Removing 2 more movies. ";
-    bool removeMovie3 = handler.removeMovie("Schindler's List", 1993);
-    bool removeMovie4 = handler.removeMovie("Pulp Fiction", 1994);
+    bool removeMovie3 = handler->removeMovie("Schindler's List", 1993);
+    bool removeMovie4 = handler->removeMovie("Pulp Fiction", 1994);
 
     if (removeMovie3 && removeMovie4)
     {
@@ -244,9 +232,9 @@ void testHandler(MovieHandler & handler)
 
 
     cout << "Clearing all movies. ";
-    handler.clear();
+    handler->clear();
 
-    movieCount = handler.getMovieCount();
+    movieCount = handler->getMovieCount();
     cout << "Movies in list " << movieCount << ". ";
     if (movieCount == 0)
     {
@@ -256,6 +244,8 @@ void testHandler(MovieHandler & handler)
     {
         cout << "FAIL." << endl;
     }
+
+    delete handler;
     
     _CrtMemCheckpoint( &endMemState );
 
