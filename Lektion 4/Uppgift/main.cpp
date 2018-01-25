@@ -6,18 +6,29 @@ using namespace std;
 #define new new(_NORMAL_BLOCK, __FILE__, __LINE__)
 
 // Skapa klassen MovieHandler som kommer att hantera klassen Movie
+#include "MovieHandler.h"
+
+// Du ska även testa fyra olika metoder att hantera HAR-relationer
 // Det statiska arrayen ska vara minst 10 element stort
 // och det dynamiska arrayed ska börja på en kapacitet av 5
 // och kommer expandera vid behov.
 
-#include "MovieHandler.h"
+// Kör din implementering med det 4e alternativet i menyn 
+// och se till att varje rad slutar med "OK!"
 
+// Metod 1
 // Statiskt array med statiska objekt
 // Movie movies[SIZE];
+
+// Metod 2
 // Statiskt array med dynamiska objekt
 // Movie * movies[SIZE];
+
+// Metod 3
 // Dynamisk array med statiska objekt
 // Movie * movies;
+
+// Metod 4
 // Dynamisk array med dynamiska objekt
 // Movie ** movies;
 
@@ -59,7 +70,6 @@ int main()
         }
     }
 
-    system("pause");
     return 0;
 }
 
