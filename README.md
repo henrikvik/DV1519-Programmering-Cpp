@@ -25,4 +25,7 @@ För att hitta i vilken fil som minnesläckan kommer ifrån så måste du ha det
 * [C++ Referens Sida](http://en.cppreference.com/)
 * [Vad är objektorientering?](http://www.databasteknik.se/webbkursen/oo-grunder/)
 * [UML Cheatsheet](http://www.anotherchris.net/wp-content/uploads/2010/01/umlcheatsheet.jpg)
+* [Hur Pekare Fungerar](https://www.programiz.com/c-programming/c-pointers)
+
+# Extra
 * [Game Programming Patterns](http://gameprogrammingpatterns.com/contents.html)
