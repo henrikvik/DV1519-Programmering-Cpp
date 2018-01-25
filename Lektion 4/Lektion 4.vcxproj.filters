@@ -38,5 +38,8 @@
     <ClInclude Include="DiceCup.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Uppgift\MovieHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

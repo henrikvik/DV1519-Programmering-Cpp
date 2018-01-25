@@ -120,6 +120,7 @@
     <ClInclude Include="Dice.h" />
     <ClInclude Include="DiceCup.h" />
     <ClInclude Include="Friend.h" />
+    <ClInclude Include="Uppgift\MovieHandler.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
