@@ -114,7 +114,7 @@
     <ClCompile Include="Dice.cpp" />
     <ClCompile Include="DiceCup.cpp" />
     <ClCompile Include="Friend.cpp" />
-    <ClCompile Include="main2.cpp" />
+    <ClCompile Include="Uppgift\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dice.h" />

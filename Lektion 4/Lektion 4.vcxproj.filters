@@ -21,10 +21,10 @@
     <ClCompile Include="Dice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main2.cpp">
+    <ClCompile Include="DiceCup.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DiceCup.cpp">
+    <ClCompile Include="Uppgift\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
