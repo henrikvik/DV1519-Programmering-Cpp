@@ -5,6 +5,8 @@ using namespace std;
 #include "Friend.h"
 #include "Dice.h"
 
+#define new new(_NORMAL_BLOCK, __FILE__, __LINE__)
+
 int main()
 {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
@@ -60,6 +62,11 @@ int main()
 	d3->toss();
 	// d4 är ett dyanismt array med dice objekt, välj objektet och anropa normalt
 	d4[0].toss();
+
+	// ta bort d3 för objekt ligger på heapen
+	delete d3;
+	// ta bort d4 med delete[] för det är ett array på heapen
+	delete[] d4;
 
 	system("pause");
 	return 0;
