@@ -151,6 +151,30 @@ void FriendBook::saveOnFile() const
 	fout.close();
 }
 
+void FriendBook::readFromFile()
+{
+    clear();
+
+    ifstream fin;
+    fin.open(this->title + ".txt");
+
+    string name = "";
+    int birthDate = 0;
+
+    // kör så länge det finns rader att hämta och lägg raden i name variablen
+    while (getline(fin, name))
+    {
+        // hämta fördelse datum
+        fin >> birthDate;
+        // ignorera \n och gå till nästa rad
+        fin.ignore();
+
+        addFriend(name, birthDate);
+    }
+
+    fin.close();
+}
+
 void FriendBook::clear()
 {
 	this->friendsCount = 0;
