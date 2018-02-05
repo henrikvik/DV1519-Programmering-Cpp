@@ -13,7 +13,7 @@ public:
 
 	int getCarCount() const;
 
-	void operator=(CarContainer const& other);
+	CarContainer& operator=(CarContainer const& other);
 
 private:
 	Car ** cars;

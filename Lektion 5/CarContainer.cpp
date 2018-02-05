@@ -76,11 +76,14 @@ void CarContainer::makeCopy(CarContainer const& other)
 	}
 }
 
-void CarContainer::operator=(CarContainer const& other)
+// cc1 == cc2 == cc3 == cc4;
+CarContainer& CarContainer::operator=(CarContainer const& other)
 {
 	if (this != &other)
 	{
 		freeMemory();
 		makeCopy(other);
 	}
+
+	return *this;
 }
