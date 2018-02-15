@@ -29,4 +29,5 @@ För att hitta i vilken fil som minnesläckan kommer ifrån så måste du ha det
 
 # Extra
 * [Game Programming Patterns](http://gameprogrammingpatterns.com/contents.html)
-* [SFML Boilerplate](https://github.com/henrikvik/SFML-Skeleton)
+* [SFML Skeleton](https://github.com/henrikvik/SFML-Skeleton)
+* [SFML Pong](https://github.com/henrikvik/SFML-Pong)
