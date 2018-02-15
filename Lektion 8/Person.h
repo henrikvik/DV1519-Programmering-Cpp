@@ -9,6 +9,7 @@ public:
 	virtual ~Person();
 
 	Person(const Person &other);
+	Person& operator=(const Person &other);
 
 	string getName() const;
 	string getMail() const;
@@ -19,7 +20,7 @@ public:
 	string toString() const;
 	virtual string toStringSpecific() const = 0;
 
-	Person& operator=(const Person &other);
+
 
 private:
 	string name;

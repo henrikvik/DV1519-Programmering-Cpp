@@ -17,6 +17,18 @@ Person::Person(const Person &other)
 	this->mail = other.mail;
 }
 
+Person& Person::operator=(const Person & other)
+{
+	if (this != &other)
+	{
+		this->name = other.name;
+		this->mail = other.mail;
+	}
+
+	return *this;
+}
+
+
 string Person::getName() const
 {
 	return this->name;
@@ -46,13 +58,3 @@ string Person::toString() const
 	return sout.str();
 }
 
-Person & Person::operator=(const Person & other)
-{
-	if (this != &other)
-	{
-		this->name = other.name;
-		this->mail = other.mail;
-	}
-
-	return *this;
-}
