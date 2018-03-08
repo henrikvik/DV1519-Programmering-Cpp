@@ -1,0 +1,31 @@
+1) Klassen med den rent virtuella funktionen blir abstrakt och det går inte att skapa objekt av den typen längre. Subklasser av en basklass med en rent virtuell funktion måste implementera den funktion eller också bli abstrakta.
+
+2) Shallow-copy innebär att man kopierar alla variabler rakt av, detta vill man inte ska ske med pekare då man oftast vill ha en egen kopia av datan och inte pekaren. När man arbetar med statiskt data (tex. Class array[5];) så är det okej med shallow-copy. Deep-copy är när man går in i en pekare och kopiear datan istället för pekaren, detta är väldigt viktigt när man abetar med pekar-typer (tex. Class * array;).
+
+3) En klassmall är en klass som använder en generisktyp, detta innebär att man kan skapa en klass som fungerar med mer än en typ. Väldigt använbart för samlingsklasser där funktionaliteten är samma oavsätt typ. Skapas genom att använda template<typename T> och ett exempel på en klassmall är std::vector<T>.
+
+4)
+	a) När objektets scope/block lämnas 
+	{
+		int a;
+		{
+			int b = a; // okej
+		} // b's destruktor körs här
+
+		a = b // fungerar inte
+	} // a's destruktor körs här
+	b) När vi frigör objekts minne manuellt, med delete
+	{
+		int * a = new int();
+		delete a; // a's destrukt körs
+	}
+5) 
+int twopow(int x)
+{
+	if (x > 0)
+	{
+		return 2 * twopow(x - 1);
+	}
+	return 1;
+}
+
